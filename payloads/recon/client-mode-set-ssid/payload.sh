@@ -1,4 +1,8 @@
 #!/bin/sh
+# TITLE Client Mode Set SSID
+# AUTHOR jakeis0dd
+# DESCRIPTION: Set the Client Mode SSID to the selected AP from Recon.
+
 set -eu
 
 SSID="${_RECON_SELECTED_AP_SSID:-}"
@@ -11,6 +15,8 @@ fi
 uci set wireless.wlan0cli.ssid="$SSID"
 uci commit wireless
 wifi reload
-ALERT "Client Mode SSID set to:\n$SSID"
+LOG "Client Mode SSID set to:\n$SSID"
+sleep 5
+LOG "Rebooting Server..."
 service pineapplepager restart >/dev/null 2>&1 || true
 exit 0
