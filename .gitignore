@@ -16,3 +16,6 @@
 .env
 .env.*
 !.env.example
+
+# Local saved Wi-Fi networks
+/payloads/user/general/client_wifi_manager/saved_networks.db
