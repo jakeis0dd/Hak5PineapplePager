@@ -1,0 +1,18 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Local Pager downloads and backups
+/loot/
+/logs/
+/backups/
+
+# Local environment settings
+.env
+.env.*
+!.env.example

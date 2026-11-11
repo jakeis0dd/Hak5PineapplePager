@@ -4,11 +4,11 @@ Bluetooth Finder lists nearby BLE advertisements and discoverable Classic Blueto
 
 ## Install
 
-Connect the Pager over USB-C or its Management AP. On your Mac, unzip the release, open Terminal in the directory containing the `Bluetooth_Finder` folder, and run:
+Connect the Pager over USB-C or its Management AP. On your Mac, open Terminal at this repository's root and run:
 
 ```sh
 ssh root@172.16.52.1 'mkdir -p /root/payloads/user/reconnaissance'
-scp -O -r Bluetooth_Finder root@172.16.52.1:/root/payloads/user/reconnaissance/
+scp -O -p -r payloads/user/reconnaissance/Bluetooth_Finder root@172.16.52.1:/root/payloads/user/reconnaissance/
 ssh root@172.16.52.1 'chmod +x /root/payloads/user/reconnaissance/Bluetooth_Finder/payload.sh'
 ```
 
